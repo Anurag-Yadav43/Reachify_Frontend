@@ -8,7 +8,7 @@ function Register({ onSwitchToLogin }) {
     email: '',
     password: '',
     confirmPassword: '',
-    adminCode: ''  // Special code for superuser registration
+    adminCode: ''
   });
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
