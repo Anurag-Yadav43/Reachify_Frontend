@@ -17,7 +17,7 @@ function Login({ onLoginSuccess }) {
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      const response = await fetch('http://localhost:8000/api/token/', {
+      const response = await fetch('http://reachifybackend.azurewebsites.net/api/token/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

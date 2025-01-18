@@ -12,7 +12,7 @@ export function ItemProvider({ children }) {
   const fetchItems = async () => {
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:8000/api/items/', {
+      const response = await fetch('http://reachifybackend.azurewebsites.net/api/items/', {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         }
@@ -29,7 +29,7 @@ export function ItemProvider({ children }) {
 
   const handleAddItem = async (newItem) => {
     try {
-      const response = await fetch('http://localhost:8000/api/items/', {
+      const response = await fetch('http://reachifybackend.azurewebsites.net/api/items/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -46,7 +46,7 @@ export function ItemProvider({ children }) {
 
   const handleDeleteItem = async (id) => {
     try {
-      const response = await fetch(`http://localhost:8000/api/items/${id}/`, {
+      const response = await fetch(`http://reachifybackend.azurewebsites.net/api/items/${id}/`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`

@@ -17,7 +17,7 @@ function App() {
   const fetchItems = async () => {
     setLoading(true)
     try {
-      const response = await fetch('http://localhost:8000/api/items/', {
+      const response = await fetch('http://reachifybackend.azurewebsites.net/api/items/', {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         }
@@ -40,7 +40,7 @@ function App() {
 
   const handleAddItem = async (newItem) => {
     try {
-      const response = await fetch('http://localhost:8000/api/items/', {
+      const response = await fetch('http://reachifybackend.azurewebsites.net/api/items/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -57,7 +57,7 @@ function App() {
 
   const handleDeleteItem = async (id) => {
     try {
-      const response = await fetch(`http://localhost:8000/api/items/${id}/`, {
+      const response = await fetch(`http://reachifybackend.azurewebsites.net/api/items/${id}/`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
