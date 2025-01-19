@@ -12,7 +12,14 @@ Frontend Setup
 bashCopycd frontend
 npm install
 npm start
-Frontend runs at http://localhost:
+Frontend runs at http://localhost:3173
+
+Backend Setup
+bashCopycd backend
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+pip install -r requirements.txt
+uvicorn main:app --reload
 
 
 API Documentation
